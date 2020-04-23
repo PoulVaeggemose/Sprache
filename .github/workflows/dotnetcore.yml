@@ -9,14 +9,16 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.0.0
+        dotnet-version: 2.0.07
+    - name: Setup .net framework env
+      uses: vrnobody/Setup-DotNetFrameworkEnv@v1
     - name: Install dependencies
       run: dotnet restore
     - name: Build
