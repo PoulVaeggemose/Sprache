@@ -29,6 +29,6 @@ jobs:
       uses: actions/upload-artifact@v2-preview
       with:
         # Artifact name
-        name: Nuget packages
+        name: NugetPackages
         # Directory containing files to upload
         path: src/Sprache/bin/Release/netstandard2.0/*.*
